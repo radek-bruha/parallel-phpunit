@@ -1,0 +1,6 @@
+.idea
+vendor
+composer.lock
+docker-compose.yml
+start.ps1
+test.ps1

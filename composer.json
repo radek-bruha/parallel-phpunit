@@ -1,0 +1,33 @@
+{
+    "name": "radek-bruha/parallel-phpunit",
+    "description": "Parallel PhpUnit",
+    "license": "unlicense",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Bruha\\ParallelPhpUnit\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/parallel-phpunit",
+        "bin/parallel-phpunit-benchmark"
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-dom": "*",
+        "ext-simplexml": "*",
+        "phpunit/phpunit": "^8.4",
+        "symfony/process": "^4.4"
+    },
+    "require-dev": {
+        "radek-bruha/coding-standard": "^1.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "enable-patching": true
+    }
+}

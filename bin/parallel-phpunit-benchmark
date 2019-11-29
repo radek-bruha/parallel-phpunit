@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Bruha\ParallelPhpUnit\Benchmark;
+
+require __DIR__ . (is_file(__DIR__ . '/../../../autoload.php') ? '/../../../autoload.php' : '/../vendor/autoload.php');
+
+exit((new Benchmark((int) ($argv[1] ?? 1), (int) ($argv[2] ?? 1), ($argv[3] ?? '--no-coverage') === '--coverage'))->run());

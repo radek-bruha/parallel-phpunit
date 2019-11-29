@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Bruha\ParallelPhpUnit\Command;
+
+require __DIR__ . (is_file(__DIR__ . '/../../../autoload.php') ? '/../../../autoload.php' : '/../vendor/autoload.php');
+
+exit((new Command((int) ($argv[1] ?? 1), ($argv[2] ?? '--no-coverage') === '--coverage'))->run());
